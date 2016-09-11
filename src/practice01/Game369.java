@@ -1,17 +1,38 @@
 package practice01;
 public class Game369 {
 	public static void main(String[] args) {
+
+	int count = 100;
 		
-		int number = 36942;	//문자열로 보고 푸는것 추천
-		String s = String.valueOf(number); //number를 문자열로 변환
+	for(int i = 1; i <=count; i++){
+		String s = String.valueOf(i);	
 		
-		System.out.println(s.length());
-		char c = s.charAt(2); //0부터 시작해서 2번째 문자를 빼내라
-		System.out.println(c);
+		if(i <= 10){
+		char c1 = s.charAt(0);
+			if(c1 == '3' || c1 == '6' || c1 == '9'){
+				System.out.println(i + " 짝");
+				}
+			}
 		
-		int ClapCount = 0;
-		if(c == '3' || c == '6' || c == '9'){
-			ClapCount++;
+		if(i > 10 && i <= count){
+			char c2 = s.charAt(0);
+			char c3 = s.charAt(1);
+			if(c2 == '3' || c2 =='6' || c2 =='9'){
+				System.out.print(i + " 짝");
+
+				if(c3 == '3' || c3 == '6' || c3 == '9'){
+				System.out.print("짝");
+			}
+				System.out.println();
+			}
+
 		}
+			
+		
+		}
+		
 	}
+		
 }
+
+	
